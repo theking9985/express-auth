@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/signup', function(req, res) {
-  res.send('signup page');
+  res.render('auth/signup');
 });
 
 router.post('/signup', function(req, res) {
@@ -10,7 +10,7 @@ router.post('/signup', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-  res.send('login page');
+  res.render('auth/login');
 });
 
 router.post('/login', function(req, res) {
