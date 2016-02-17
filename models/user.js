@@ -9,7 +9,10 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       validate: {
-        len: [8, 99]
+        len: {
+          args: [8, 99],
+          msg: 'Your password should between 8 and 99 characters'
+        }
       }
     }
   }, {
